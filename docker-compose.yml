@@ -1,0 +1,13 @@
+version: '2'
+services:
+  vscode:
+    image: jr-app-vscode
+    environment:
+      - VNC_PASSWORD=jr
+      - DISPLAY_WIDTH=1462
+      - DISPLAY_HEIGHT=820
+      - X11VNC_EXTRA_OPTS=-fixscreen V=1
+    volumes:
+      - ~/vscode:/app/:rw
+    ports:
+      - 5800:5800
