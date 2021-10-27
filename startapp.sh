@@ -1,4 +1,5 @@
 #!/bin/sh
-USER=appuser 
+USER=root
 HOME="/app"
-exec /usr/bin/code -w
+whoami
+exec /usr/bin/code -w --user-data-dir="/app"
